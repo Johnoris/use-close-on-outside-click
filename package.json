@@ -1,0 +1,40 @@
+{
+  "name": "use-close-on-click-outside",
+  "version": "1.5.7",
+  "description": "This versatile component helps you easily detect and handle clicks outside a specified element. By utilizing this hook, you can effortlessly implement functionality such as closing modals or dropdown menus when users interact with the external area.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "React click outside hook",
+    "Close modal on external click",
+    "Dropdown menu outside click detection",
+    "Improve user experience with click outside functionality",
+    "Manage active state on external click",
+    "React event handling for external clicks",
+    "Close modal",
+    "Outside click",
+    "Modal external click",
+    "Close menu",
+    "Menu external click",
+    "Click"
+  ],
+  "author": "John Orisanwo (johnorisanwo@gmail.com) (https://github.com/johnoris)",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.40",
+    "rollup": "^4.6.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.2"
+  }
+}
