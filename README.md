@@ -33,7 +33,7 @@ const App = () => {
           modalActive
             &&
             <>
-              <div ref={ref} className="modal">
+              <div ref={modalRef} className="modal">
                 <h2>This is a modal</h2>
                 <h4>Click outside this modal to close</h4>
               </div>
@@ -62,7 +62,7 @@ const App = () => {
           modalActive
             &&
             <>
-              <div ref={ref} className="modal">
+              <div ref={moalRef} className="modal">
                 <h2>This is a modal</h2>
                 <h4>Click outside this modal to close</h4>
               </div>
