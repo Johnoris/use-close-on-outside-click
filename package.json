@@ -1,6 +1,6 @@
 {
   "name": "use-close-on-click-outside",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "This versatile component helps you easily detect and handle clicks outside a specified element. By utilizing this hook, you can effortlessly implement functionality such as closing modals or dropdown menus when users interact with the external area.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
