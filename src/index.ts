@@ -5,19 +5,35 @@ interface useCloseOnClickOutsideReturnType extends Array<boolean | Dispatch<SetS
     1: Dispatch<SetStateAction<boolean>>;
   }
 
-const useCloseOnClickOutside = (ref:RefObject<any>): useCloseOnClickOutsideReturnType => {
+const useCloseOnClickOutside = (ref:RefObject<any>, target?: string): useCloseOnClickOutsideReturnType => {
   const [ isActive, setIsActive ] = useState<boolean>(false);
 
+  const logAndSwitchToDocument = () => {
+    console.warn('use-close-on-external-click: switching to the document target; no target specified')
+    return document
+  }
+
   useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
+      const handleClickOutside:EventListener = (event) => {
         if (ref.current && !ref.current.contains(event.target as Node)) {
           setIsActive(false);
         }
       };
-
-      document.addEventListener('mousedown', handleClickOutside);
+      const targetElement = target ? document.querySelector(target) : logAndSwitchToDocument()
+      if(targetElement){
+        targetElement.addEventListener('mousedown', handleClickOutside) 
+      }
+      else{
+        console.warn('use-close-on-external-click: switching to the document target; sepecified target is invalid')
+        document.addEventListener('mousedown', handleClickOutside)
+      }
       return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
+        if(targetElement){
+          targetElement.removeEventListener('mousedown', handleClickOutside)
+        }
+        else{
+          document.removeEventListener('mousedown', handleClickOutside)
+        }
       };
 
   }, [ref]);
