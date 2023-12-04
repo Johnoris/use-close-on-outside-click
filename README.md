@@ -21,9 +21,9 @@ const [ modalActive, setModalActive ] = useCloseOnClickOutside(modalRef, '#root'
 
 The second prop passed is an optional prop that should be the selector of the target element
 
-| Option              | Default           Description                                                                                                                                                                                                                                       |
-| ------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Target`        | `document`             | The target element e.g `#root`, `.app-root`, `document`. It switches to document if target element is invalid or null
+| Option              | Default            | Description                                                         |
+| ------------------- | ------------------ | ------------------------------------------------------------------- |
+| `Target`        | `document`             | The target element e.g `#root`, `.app-root`, `document`. It switches to document if target element is invalid or null|
 
 
 
